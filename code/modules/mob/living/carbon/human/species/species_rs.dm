@@ -3,6 +3,7 @@
 	var/digest_pain = TRUE
 	var/natural_artist = FALSE
 	var/artist_color = "#000000" //Default to black.
+	var/sense_ghosts = FALSE
 
 /datum/species/unathi
 	vore_belly_default_variant = "L"

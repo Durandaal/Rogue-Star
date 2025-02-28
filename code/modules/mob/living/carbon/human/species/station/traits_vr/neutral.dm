@@ -1135,4 +1135,16 @@
 /datum/trait/neutral/waddle/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.verbs |= /mob/living/proc/waddle_adjust
+
+/datum/trait/neutral/sense_ghosts
+	name = "Sense Incorporeal Beings"
+	desc = "You can sense that there are ghosts nearby in a short range. Spooky!"
+	tutorial = "Sense if there is a ghost within three tiles of your current position. You cannot tell how many. It will default to a ghost by an object, otherwise you will merely sense their presence."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("sense_ghosts" = TRUE)
+
+/datum/trait/neutral/sense_ghosts/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.verbs |= /mob/living/carbon/human/proc/sense_ghosts
 //RS Edit End
